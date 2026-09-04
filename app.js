@@ -1,29 +1,35 @@
+console.log("window.destinations =", window.destinations);
+
 const grid =
-  document.getElementById(
-    "buttonGrid"
+  document.getElementById("buttonGrid");
+
+if (!window.destinations) {
+
+  console.error(
+    "window.destinations is undefined"
   );
 
-window.destinations.forEach(item => {
+} else {
 
-  const button =
-    document.createElement(
-      "button"
-    );
+  window.destinations.forEach(item => {
 
-  button.className =
-    "transfer-btn";
+    const button =
+      document.createElement("button");
 
-  button.textContent =
-    item.label;
+    button.className =
+      "transfer-btn";
 
-  button.onclick = () => {
+    button.textContent =
+      item.label;
 
-    alert(
-      item.dnis
-    );
+    button.onclick = () => {
 
-  };
+      alert(item.dnis);
 
-  grid.appendChild(button);
+    };
 
-});
+    grid.appendChild(button);
+
+  });
+
+}
