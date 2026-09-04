@@ -1,10 +1,9 @@
-console.log("destinations =", destinations);
 const grid =
   document.getElementById(
     "buttonGrid"
   );
 
-destinations.forEach(item => {
+window.destinations.forEach(item => {
 
   const button =
     document.createElement(
@@ -28,4 +27,3 @@ destinations.forEach(item => {
   grid.appendChild(button);
 
 });
-``
