@@ -1,3 +1,4 @@
+console.log("destinations =", destinations);
 const grid =
   document.getElementById(
     "buttonGrid"
